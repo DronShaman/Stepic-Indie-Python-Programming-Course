@@ -5,4 +5,18 @@
 # Теперь Василию интересно, на сколько часов освещения хватит его свечек, если он будет действовать оптимальным образом.
 # Помогите ему найти это число.
 
-
+n = list(map(int, input().split()))
+nosok = n[0]
+day = n[1]
+num = 0
+takt = 0
+while True:
+    nosok -= 1
+    num += 1
+    if day == num:
+        nosok += 1
+        num = 0
+    takt += 1
+    if nosok == 0:
+        print(takt)
+        break
